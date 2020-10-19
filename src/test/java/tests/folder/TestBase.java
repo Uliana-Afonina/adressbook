@@ -1,4 +1,4 @@
-package folderData;
+package tests.folder;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;

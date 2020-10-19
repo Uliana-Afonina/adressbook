@@ -1,4 +1,4 @@
-package folderData;
+package tests.folder;
 
 public class GroupData {
     private final String name;

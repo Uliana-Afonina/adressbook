@@ -1,10 +1,8 @@
+package tests.folder;
 
-import folderData.GroupData;
-import folderData.TestBase;
 import org.junit.Test;
 
 public class GroupCreationTests extends TestBase {
-
 
     @Test
 

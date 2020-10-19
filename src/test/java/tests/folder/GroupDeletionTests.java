@@ -1,4 +1,5 @@
-import folderData.TestBase;
+package tests.folder;
+
 import org.junit.Test;
 
 public class GroupDeletionTests extends TestBase {
