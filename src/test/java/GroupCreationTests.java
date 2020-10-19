@@ -1,16 +1,17 @@
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import folderData.GroupData;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.testng.annotations.BeforeMethod;
 
 import static com.codeborne.selenide.Browsers.CHROME;
 import static com.codeborne.selenide.Selenide.$;
 
 public class GroupCreationTests {
 
-    @BeforeMethod
-    private void setUp() {
+    @Before
+    public void setUp() {
         Configuration.startMaximized = true;
         Configuration.browser = CHROME;
         Selenide.clearBrowserCookies();
@@ -25,7 +26,7 @@ public class GroupCreationTests {
     public void testGroupCreation() {
         gotoGroupPage();
         initGroupCreation();
-        fillGroupForm("test1", "test2", "test3");
+        fillGroupForm(new GroupData("test1", "test2", "test3"));
         submitGroupCreation();
         returnToGroupPage();
 
@@ -40,16 +41,16 @@ public class GroupCreationTests {
         $(By.name("submit")).click();
     }
 
-    private void fillGroupForm(String name, String header, String footer) {
+    private void fillGroupForm(GroupData groupData) {
         $(By.name("group_name")).click();
         $(By.name("group_name")).clear();
-        $(By.name("group_name")).setValue(name);
+        $(By.name("group_name")).setValue(groupData.getName());
         $(By.name("group_header")).click();
         $(By.name("group_header")).clear();
-        $(By.name("group_header")).setValue(header);
+        $(By.name("group_header")).setValue(groupData.getHeader());
         $(By.name("group_footer")).click();
         $(By.name("group_footer")).clear();
-        $(By.name("group_footer")).setValue(footer);
+        $(By.name("group_footer")).setValue(groupData.getFooter());
     }
 
     private void initGroupCreation() {
