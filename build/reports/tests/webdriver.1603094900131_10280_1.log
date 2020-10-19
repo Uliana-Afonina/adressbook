@@ -1,0 +1,168 @@
+[1603094900.422][INFO]: Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 6349
+[1603094900.422][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1603094900.965][INFO]: [a7ca29117bad1eef4dbe1c1201603176] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "C:\\Users\\USER\\Desktop\\!Uliana\\devel\\adressbook\\build\\downloads",
+               "plugins.always_open_pdf_externally": true
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "C:\\Users\\USER\\Desktop\\!Uliana\\devel\\adressbook\\build\\downloads",
+            "plugins.always_open_pdf_externally": true
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1603094900.969][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "C:\\Users\\USER\\Desktop\\!Uliana\\devel\\adressbook\\build\\downloads"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1603094900.970][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1603094900.970][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\USER\AppData\Local\Temp\scoped_dir6548_1657327713" data:,
+[1603094901.912][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1603094903.947][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1603094906.000][INFO]: [a7ca29117bad1eef4dbe1c1201603176] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "86.0.4240.75",
+      "chrome": {
+         "chromedriverVersion": "86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378})",
+         "userDataDir": "C:\\Users\\USER\\AppData\\Local\\Temp\\scoped_dir6548_1657327713"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:51058"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "a7ca29117bad1eef4dbe1c1201603176"
+}
+[1603094906.042][INFO]: [a7ca29117bad1eef4dbe1c1201603176] COMMAND MaximizeWindow {
+
+}
+[1603094906.042][INFO]: Waiting for pending navigations...
+[1603094906.043][INFO]: Done waiting for pending navigations. Status: ok
+[1603094906.152][INFO]: Waiting for pending navigations...
+[1603094906.153][INFO]: Done waiting for pending navigations. Status: ok
+[1603094906.153][INFO]: [a7ca29117bad1eef4dbe1c1201603176] RESPONSE MaximizeWindow {
+   "height": 1056,
+   "width": 1936,
+   "x": -8,
+   "y": -8
+}
+[1603094906.163][INFO]: [a7ca29117bad1eef4dbe1c1201603176] COMMAND Navigate {
+   "url": "http://localhost/addressbook/group.php"
+}
+[1603094906.164][INFO]: Waiting for pending navigations...
+[1603094906.165][INFO]: Done waiting for pending navigations. Status: ok
+[1603094906.267][INFO]: Waiting for pending navigations...
+[1603094906.432][INFO]: Done waiting for pending navigations. Status: ok
+[1603094906.432][INFO]: [a7ca29117bad1eef4dbe1c1201603176] RESPONSE Navigate
+[1603094906.452][INFO]: [a7ca29117bad1eef4dbe1c1201603176] COMMAND Quit {
+
+}
+[1603094906.587][INFO]: [a7ca29117bad1eef4dbe1c1201603176] RESPONSE Quit
