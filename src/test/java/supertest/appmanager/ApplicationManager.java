@@ -1,35 +1,31 @@
-package tests.folder;
+package supertest.appmanager;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.junit.Before;
 import org.openqa.selenium.By;
+import supertest.model.GroupData;
 
 import static com.codeborne.selenide.Browsers.CHROME;
 import static com.codeborne.selenide.Selenide.$;
 
-public class TestBase {
-
-
-    @Before
-    public void setUp() {
+public class ApplicationManager {
+    public void init() {
         Configuration.startMaximized = true;
         Configuration.browser = CHROME;
         Selenide.clearBrowserCookies();
         Selenide.open("http://localhost/addressbook/");
         login("admin", "secret");
-
     }
 
-    protected void returnToGroupPage() {
+    public void returnToGroupPage() {
         $(By.linkText("group page")).click();
     }
 
-    protected void submitGroupCreation() {
+    public void submitGroupCreation() {
         $(By.name("submit")).click();
     }
 
-    protected void fillGroupForm(GroupData groupData) {
+    public void fillGroupForm(GroupData groupData) {
         $(By.name("group_name")).click();
         $(By.name("group_name")).clear();
         $(By.name("group_name")).setValue(groupData.getName());
@@ -41,15 +37,15 @@ public class TestBase {
         $(By.name("group_footer")).setValue(groupData.getFooter());
     }
 
-    protected void initGroupCreation() {
+    public void initGroupCreation() {
         $(By.name("new")).click();
     }
 
-    protected void gotoGroupPage() {
+    public void gotoGroupPage() {
         $(By.linkText("groups")).click();
     }
 
-    private void login(String username, String password) {
+    public void login(String username, String password) {
         $(By.name("user")).click();
         $(By.name("user")).clear();
         $(By.name("user")).setValue(username);
@@ -59,7 +55,7 @@ public class TestBase {
         $(By.xpath(".//*[@type='submit']")).click();
     }
 
-    protected void deleteSelectedGroups() {
+    public void deleteSelectedGroups() {
         $(By.name("delete")).click();
     }
 }

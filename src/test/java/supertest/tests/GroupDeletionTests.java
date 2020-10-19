@@ -1,4 +1,4 @@
-package tests.folder;
+package supertest.tests;
 
 import org.junit.Test;
 
@@ -7,9 +7,9 @@ public class GroupDeletionTests extends TestBase {
     @Test
 
     public void testGroupDeletion() {
-        gotoGroupPage();
-        deleteSelectedGroups();
-        returnToGroupPage();
+        app.gotoGroupPage();
+        app.deleteSelectedGroups();
+        app.returnToGroupPage();
     }
 
 }

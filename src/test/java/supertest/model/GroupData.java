@@ -1,4 +1,4 @@
-package tests.folder;
+package supertest.model;
 
 public class GroupData {
     private final String name;
