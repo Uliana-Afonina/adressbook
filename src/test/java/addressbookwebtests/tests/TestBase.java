@@ -1,7 +1,7 @@
-package supertest.tests;
+package addressbookwebtests.tests;
 
 import org.junit.Before;
-import supertest.appmanager.ApplicationManager;
+import addressbookwebtests.appmanager.ApplicationManager;
 
 public class TestBase {
 

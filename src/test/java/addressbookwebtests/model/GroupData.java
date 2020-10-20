@@ -1,4 +1,4 @@
-package supertest.model;
+package addressbookwebtests.model;
 
 public class GroupData {
     private final String name;

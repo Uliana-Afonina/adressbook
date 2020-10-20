@@ -1,4 +1,4 @@
-package supertest.appmanager;
+package addressbookwebtests.appmanager;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -9,7 +9,6 @@ public class ApplicationManager {
     private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
- //   private GroupHelper groupHelper = new GroupHelper();
 
     public void init() {
         Configuration.startMaximized = true;

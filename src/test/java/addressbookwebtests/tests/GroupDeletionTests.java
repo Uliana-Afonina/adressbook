@@ -1,4 +1,4 @@
-package supertest.tests;
+package addressbookwebtests.tests;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package supertest.appmanager;
+package addressbookwebtests.appmanager;
 
 import org.openqa.selenium.By;
 

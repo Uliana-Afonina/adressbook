@@ -1,7 +1,7 @@
-package supertest.appmanager;
+package addressbookwebtests.appmanager;
 
 import org.openqa.selenium.By;
-import supertest.model.GroupData;
+import addressbookwebtests.model.GroupData;
 
 import static com.codeborne.selenide.Selenide.$;
 

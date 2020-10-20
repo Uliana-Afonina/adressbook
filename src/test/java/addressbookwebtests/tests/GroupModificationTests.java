@@ -1,7 +1,7 @@
-package supertest.tests;
+package addressbookwebtests.tests;
 
 import org.junit.Test;
-import supertest.model.GroupData;
+import addressbookwebtests.model.GroupData;
 
 public class GroupModificationTests extends TestBase {
 
