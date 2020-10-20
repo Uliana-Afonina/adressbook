@@ -9,6 +9,7 @@ public class ApplicationManager {
     private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
+    private ContactHelper contactHelper;
 
     public void init() {
         Configuration.startMaximized = true;
@@ -18,10 +19,9 @@ public class ApplicationManager {
         groupHelper = new GroupHelper();
         navigationHelper = new NavigationHelper();
         sessionHelper = new SessionHelper();
+        contactHelper = new ContactHelper();
         sessionHelper.login("admin", "secret");
     }
-
-
 
     public GroupHelper getGroupHelper() {
         return groupHelper;
@@ -30,4 +30,10 @@ public class ApplicationManager {
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
     }
+
+    public ContactHelper getContactHelper() {
+        return contactHelper;
+    }
+
+
 }

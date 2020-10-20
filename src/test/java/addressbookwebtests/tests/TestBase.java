@@ -1,7 +1,7 @@
 package addressbookwebtests.tests;
 
-import org.junit.Before;
 import addressbookwebtests.appmanager.ApplicationManager;
+import org.junit.Before;
 
 public class TestBase {
 
@@ -12,5 +12,9 @@ public class TestBase {
         app.init();
 
     }
+
+
+
+
 
 }
