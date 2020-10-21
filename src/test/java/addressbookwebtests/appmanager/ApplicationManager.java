@@ -2,18 +2,36 @@ package addressbookwebtests.appmanager;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import org.openqa.selenium.remote.BrowserType;
 
-import static com.codeborne.selenide.Browsers.CHROME;
+import static com.codeborne.selenide.Browsers.*;
 
 public class ApplicationManager {
     private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
     private ContactHelper contactHelper;
+    private String browser;
+
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
 
     public void init() {
+//        String browser = BrowserType.CHROME;
+//        String browser = null;
+        switch (browser) {
+            //case (CHROME): Configuration.browser = CHROME; break;
+            case (IE): Configuration.browser = IE; break;
+            case (FIREFOX): Configuration.browser = FIREFOX; break;
+            default: Configuration.browser = CHROME; break;
+        }
+
+        if (browser == BrowserType.CHROME) {
+            Configuration.browser = CHROME;
+        } else
+
         Configuration.startMaximized = true;
-        Configuration.browser = CHROME;
         Selenide.clearBrowserCookies();
         Selenide.open("http://localhost/addressbook/");
         groupHelper = new GroupHelper();
