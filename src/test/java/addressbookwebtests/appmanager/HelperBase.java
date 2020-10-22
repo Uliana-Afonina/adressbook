@@ -13,7 +13,9 @@ public class HelperBase {
 
     protected void type(String locator, String text) {
         click(By.name(locator));
-        $(By.name(locator)).clear();
-        $(By.name(locator)).setValue(text);
+        if (text != null) {
+            $(By.name(locator)).clear();
+            $(By.name(locator)).setValue(text);
+        }
     }
 }
