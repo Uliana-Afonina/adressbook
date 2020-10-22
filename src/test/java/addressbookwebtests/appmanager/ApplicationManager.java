@@ -18,18 +18,12 @@ public class ApplicationManager {
     }
 
     public void init() {
-//        String browser = BrowserType.CHROME;
-//        String browser = null;
         switch (browser) {
-            //case (CHROME): Configuration.browser = CHROME; break;
             case (IE): Configuration.browser = IE; break;
             case (FIREFOX): Configuration.browser = FIREFOX; break;
+            case (EDGE): Configuration.browser = EDGE; break;
             default: Configuration.browser = CHROME; break;
         }
-
-        if (browser == BrowserType.CHROME) {
-            Configuration.browser = CHROME;
-        } else
 
         Configuration.startMaximized = true;
         Selenide.clearBrowserCookies();
