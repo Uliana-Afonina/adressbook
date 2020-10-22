@@ -2,7 +2,6 @@ package addressbookwebtests.appmanager;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.openqa.selenium.remote.BrowserType;
 
 import static com.codeborne.selenide.Browsers.*;
 
