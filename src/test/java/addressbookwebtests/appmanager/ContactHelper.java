@@ -2,7 +2,6 @@ package addressbookwebtests.appmanager;
 
 import addressbookwebtests.model.ContactData;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -25,10 +24,5 @@ public class ContactHelper extends HelperBase {
         type("address", contactData.getAddress());
         type("home", contactData.getHome());
         type("notes", contactData.getNotes());
-
-        if (isElementPresent(By.name("new_group"))) {
-            new Select($(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
-        }
     }
-
 }
