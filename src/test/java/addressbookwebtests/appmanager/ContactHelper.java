@@ -5,8 +5,6 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.NoSuchElementException;
-
 import static com.codeborne.selenide.Selenide.$;
 
 public class ContactHelper extends HelperBase {
@@ -15,6 +13,8 @@ public class ContactHelper extends HelperBase {
     }
 
     public void returnToHomePage() {
+        if (isElementPresent(By.id("maintable"))) {
+            return;}
         $(By.linkText("home page")).click();
     }
 
