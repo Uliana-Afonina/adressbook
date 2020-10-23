@@ -1,6 +1,7 @@
 package addressbookwebtests.appmanager;
 
 import addressbookwebtests.model.ContactData;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
@@ -17,12 +18,15 @@ public class ContactHelper extends HelperBase {
         $(By.linkText("home page")).click();
     }
 
-    public void fillContactForm(ContactData contactData) {
+    public void fillContactForm(ContactData contactData, boolean creation) {
+
         type("firstname", contactData.getFirsname());
         type("lastname", contactData.getLastname());
 
-        if (isElementPresent(By.name("new_group"))) {
+        if (creation) {
             new Select($(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+        } else {
+            Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
 
     }
