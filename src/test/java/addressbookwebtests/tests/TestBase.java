@@ -1,6 +1,7 @@
 package addressbookwebtests.tests;
 
 import addressbookwebtests.appmanager.ApplicationManager;
+import addressbookwebtests.model.GroupData;
 import org.junit.Before;
 import org.openqa.selenium.remote.BrowserType;
 
@@ -13,9 +14,6 @@ public class TestBase {
         app.init();
 
     }
-
-
-
 
 
 }

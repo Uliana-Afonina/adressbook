@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import addressbookwebtests.model.GroupData;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class GroupHelper extends HelperBase {
 
@@ -26,11 +27,18 @@ public class GroupHelper extends HelperBase {
     }
 
     public void deleteSelectedGroups() {
+//        selectGroup ();
         click(By.name("delete"));
     }
 
     public void initGroupModification() {
+//        selectGroup();
         click(By.name("edit"));
+    }
+
+    public void selectGroup (int index) {
+        $$(By.name("selected[]")).get(index).click();
+ //       $(By.name("selected[]")).click();
     }
 
     public void submitGroupModification() {
@@ -43,5 +51,17 @@ public class GroupHelper extends HelperBase {
         submitGroupCreation();
         returnToGroupPage();
 
+    }
+
+    public int getGroupCount() {
+        return $$(By.name("selected[]")).size();
+    }
+
+
+    public void groupModify() {
+        initGroupModification();
+        fillGroupForm(new GroupData("testt", null, null));
+        submitGroupModification();
+        returnToGroupPage();
     }
 }

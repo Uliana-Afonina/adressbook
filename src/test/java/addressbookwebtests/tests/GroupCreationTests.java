@@ -1,7 +1,7 @@
 package addressbookwebtests.tests;
 
+import org.junit.Assert;
 import org.junit.Test;
-import addressbookwebtests.model.GroupData;
 
 public class GroupCreationTests extends TestBase {
 
@@ -9,6 +9,9 @@ public class GroupCreationTests extends TestBase {
 
     public void testGroupCreation() {
         app.getNavigationHelper().gotoGroupPage();
+        int before = app.getGroupHelper().getGroupCount();
         app.getGroupHelper().createGroup();
+        int after = app.getGroupHelper().getGroupCount();
+        Assert.assertEquals(after, before +1);
     }
 }
