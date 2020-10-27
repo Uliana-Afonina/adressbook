@@ -62,32 +62,13 @@ public class GroupHelper extends HelperBase {
         return $$(By.name("selected[]")).size();
     }
 
-
-    public void groupModify() {
-        initGroupModification();
-        fillGroupForm(new GroupData("testt", null, null));
-        submitGroupModification();
-        returnToGroupPage();
-    }
-//
-//    public List<GroupData> getGroupList() {
-//        List<GroupData> groups = new ArrayList<GroupData>();
-//        List<SelenideElement> elements = $$x((".//*[@class='group']"));
-//        for (SelenideElement element : elements) {
-//            String name = element.getText();
-//            GroupData group = new GroupData(name, null, null);
-//            groups.add(group);
-//        }
-//        return groups;
-//    }
-
-
     public List<GroupData> getGroupList() {
         List<GroupData> groups = new ArrayList<GroupData>();
         ElementsCollection  elements = $$x(".//*[@class='group']");
         for (SelenideElement element : elements) {
             String name = element.getText();
-            GroupData group = new GroupData(name, null, null);
+            String id = element.$(By.tagName("input")).getAttribute("value");
+            GroupData group = new GroupData(id, name, null, null);
             groups.add(group);
         }
         return groups;
