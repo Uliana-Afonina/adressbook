@@ -1,10 +1,15 @@
 package addressbookwebtests.appmanager;
 
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import addressbookwebtests.model.GroupData;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.codeborne.selenide.Selenide.*;
 
 public class GroupHelper extends HelperBase {
 
@@ -36,9 +41,9 @@ public class GroupHelper extends HelperBase {
         click(By.name("edit"));
     }
 
-    public void selectGroup (int index) {
+    public void selectGroup(int index) {
         $$(By.name("selected[]")).get(index).click();
- //       $(By.name("selected[]")).click();
+        //       $(By.name("selected[]")).click();
     }
 
     public void submitGroupModification() {
@@ -63,5 +68,36 @@ public class GroupHelper extends HelperBase {
         fillGroupForm(new GroupData("testt", null, null));
         submitGroupModification();
         returnToGroupPage();
+    }
+//
+//    public List<GroupData> getGroupList() {
+//        List<GroupData> groups = new ArrayList<GroupData>();
+//        List<SelenideElement> elements = $$x((".//*[@class='group']"));
+//        for (SelenideElement element : elements) {
+//            String name = element.getText();
+//            GroupData group = new GroupData(name, null, null);
+//            groups.add(group);
+//        }
+//        return groups;
+//    }
+
+
+    public List<GroupData> getGroupList() {
+        List<GroupData> groups = new ArrayList<GroupData>();
+        ElementsCollection  elements = $$x(".//*[@class='group']");
+        for (SelenideElement element : elements) {
+            String name = element.getText();
+            GroupData group = new GroupData(name, null, null);
+            groups.add(group);
+        }
+        return groups;
+    }
+
+    public boolean isThereAGroup() {
+        if ($(By.name("selected[]")).exists()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
