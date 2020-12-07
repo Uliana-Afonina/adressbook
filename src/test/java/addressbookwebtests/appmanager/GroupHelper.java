@@ -37,7 +37,6 @@ public class GroupHelper extends HelperBase {
     }
 
     public void initGroupModification() {
-//        selectGroup();
         click(By.name("edit"));
     }
 
@@ -57,6 +56,15 @@ public class GroupHelper extends HelperBase {
         returnToGroupPage();
 
     }
+
+    public void modifyGroup(int index, GroupData group) {
+        selectGroup(index);
+        initGroupModification();
+        fillGroupForm(group);
+        submitGroupModification();
+        returnToGroupPage();
+    }
+
 
     public int getGroupCount() {
         return $$(By.name("selected[]")).size();
@@ -81,4 +89,6 @@ public class GroupHelper extends HelperBase {
             return false;
         }
     }
+
+
 }
